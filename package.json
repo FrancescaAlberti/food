@@ -1,0 +1,40 @@
+{
+    "name": "food",
+    "version": "0.0.1",
+    "description": "A Quasar Framework app",
+    "productName": "Quasar App",
+    "author": "Fra",
+    "private": true,
+    "scripts": {
+        "test": "echo \"No test specified\" && exit 0",
+        "serve": "tsc --project ./functions && rm -rf ./public/* && concurrently --kill-others 'firebase serve' 'tsc —-project ./functions --watch' 'cd frontend && ./node_modules/.bin/vue-cli-service build --no-clean --dest ../public --watch'"
+    },
+    "dependencies": {
+        "@quasar/extras": "^1.0.0",
+        "axios": "^0.18.1",
+        "core-js": "^3.6.5",
+        "firebase": "^7.21.0",
+        "git": "^0.1.5",
+        "quasar": "^1.0.0"
+    },
+    "devDependencies": {
+        "@quasar/app": "^2.0.0",
+        "workbox-webpack-plugin": "^5.1.4"
+    },
+    "browserslist": [
+        "last 10 Chrome versions",
+        "last 10 Firefox versions",
+        "last 4 Edge versions",
+        "last 7 Safari versions",
+        "last 8 Android versions",
+        "last 8 ChromeAndroid versions",
+        "last 8 FirefoxAndroid versions",
+        "last 10 iOS versions",
+        "last 5 Opera versions"
+    ],
+    "engines": {
+        "node": ">= 10.18.1",
+        "npm": ">= 6.13.4",
+        "yarn": ">= 1.21.1"
+    }
+}
